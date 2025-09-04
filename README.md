@@ -4,7 +4,6 @@
 
 ### [Website](https://studio-lonier.vercel.app/)
 
-[![](https://github.com/shalkauskas/media/blob/main/tete-gif.gif)](https://studio-lonier.vercel.app/ "Visit website")
 
 ### Features
 
@@ -61,5 +60,3 @@ Team member data is in `components/Team/members.js`
 
 ### License
 MIT License
-### Credits
-*Thanks to [**Daria Khudiakova**](https://daria-in-design.com/) design!*
