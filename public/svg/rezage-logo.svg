@@ -1,0 +1,20 @@
+<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="30" cy="30" r="28" fill="#F8F6F4" stroke="#D4C8B8" stroke-width="2"/>
+  
+  <!-- Rezâge text -->
+  <text x="30" y="25" font-family="Arial, sans-serif" font-size="8" font-weight="bold" text-anchor="middle" fill="#8B7355">
+    REZÂGE
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="30" y="35" font-family="Arial, sans-serif" font-size="6" text-anchor="middle" fill="#A89B7D">
+    SKIN CARE
+  </text>
+  
+  <!-- Decorative flower/leaf element -->
+  <path d="M30 15 C35 20, 40 25, 35 30 C30 35, 25 30, 30 25 C35 20, 30 15, 30 15" fill="#D4C8B8"/>
+  <path d="M30 35 C25 40, 20 45, 25 50 C30 45, 35 40, 30 35" fill="#D4C8B8"/>
+  <path d="M15 30 C20 25, 25 20, 30 25 C35 30, 30 35, 25 30 C20 25, 15 30, 15 30" fill="#D4C8B8"/>
+  <path d="M45 30 C40 35, 35 40, 30 35 C25 30, 30 25, 35 30 C40 35, 45 30, 45 30" fill="#D4C8B8"/>
+</svg>
