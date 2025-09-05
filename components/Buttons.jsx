@@ -12,22 +12,19 @@ export default function Buttons(props) {
         </button>
       </a>
       <Link
-        passHref={true}
         scroll={false}
         href={{
           pathname: "/",
           query: { id: "services" },
         }}
       >
-        <a>
-          <button
-            className={`border border-primary-500 rounded-2xl font-bold text-base mt-12 outline-none py-2 px-3 hover:opacity-75 text-primary-500 ${
-              props.mobile ? "ml-3" : "ml-24"
-            }`}
-          >
-            Ver outros serviços
-          </button>
-        </a>
+        <button
+          className={`border border-primary-500 rounded-2xl font-bold text-base mt-12 outline-none py-2 px-3 hover:opacity-75 text-primary-500 ${
+            props.mobile ? "ml-3" : "ml-24"
+          }`}
+        >
+          Ver outros serviços
+        </button>
       </Link>
     </div>
   );

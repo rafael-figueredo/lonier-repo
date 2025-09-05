@@ -55,50 +55,11 @@ export default function Footer() {
             <div className="copyright text-primary-200">
               © {year} Studio Lonier Salon. Todos os direitos reservados.
             </div>
-
-            {/* Legal Links */}
-            <div className="bottom-menu flex flex-wrap justify-center lg:justify-end space-x-4 text-sm">
-              <a href="#" className="text-gray-100 hover:text-primary-300 transition-colors">Mapa do Site</a>
-              <span className="text-primary-600">|</span>
-              <a href="#" className="text-gray-100 hover:text-primary-300 transition-colors">Termos de Uso</a>
-              <span className="text-primary-600">|</span>
-              <a href="#" className="text-gray-100 hover:text-primary-300 transition-colors">Política de Privacidade</a>
-              <span className="text-primary-600">|</span>
-              <a href="#" className="text-gray-100 hover:text-primary-300 transition-colors">LGPD</a>
-              <span className="text-primary-600">|</span>
-              <a href="#" className="text-gray-100 hover:text-primary-300 transition-colors flex items-center">
-                Escolhas de Privacidade
-                <span className="ml-1 text-blue-400">☐</span>
-                <span className="ml-1">×</span>
-              </a>
-              <span className="text-primary-600">|</span>
-              <a href="#" className="text-gray-100 hover:text-primary-300 transition-colors">Declaração de Acessibilidade</a>
-            </div>
-
-            {/* Payment Methods */}
-            <div className="accepted-payments flex items-center space-x-2">
-              <span className="text-primary-200 text-sm mr-2">Aceitamos:</span>
-              <div className="flex space-x-1">
-                <span className="text-white bg-gray-800 px-2 py-1 rounded text-xs font-semibold">VISA</span>
-                <span className="text-white bg-gray-800 px-2 py-1 rounded text-xs font-semibold">MC</span>
-                <span className="text-white bg-gray-800 px-2 py-1 rounded text-xs font-semibold">AMEX</span>
-                <span className="text-white bg-gray-800 px-2 py-1 rounded text-xs font-semibold">DISCOVER</span>
-              </div>
-            </div>
-
-            {/* Country Selector */}
-            <div className="dropdown flex items-center space-x-2">
-              <div className="w-4 h-4 bg-primary-200 rounded-full"></div>
-              <a href="#" className="text-gray-100 hover:text-primary-300 transition-colors text-sm">
-                Brasil
-              </a>
-              <span className="text-primary-200">▲</span>
-            </div>
           </div>
 
           {/* Contact Info */}
           <div className="mt-4 text-center lg:text-left text-primary-200 text-sm">
-            617.559.0660 | 765 Beacon St. Newton Centre, MA 02459
+          Endereço: R. Miguel Rotger Domingues, 268 - Centro, Itapecerica da Serra - SP, 06850-780
           </div>
         </div>
       </div>

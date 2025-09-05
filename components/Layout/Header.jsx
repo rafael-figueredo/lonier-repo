@@ -71,80 +71,72 @@ export default function Header(props) {
           {/* Left Navigation Links - Hidden on Mobile */}
           <div className="hidden lg:flex items-center space-x-12">
             <Link
-              passHref={true}
               scroll={false}
               href={{
                 pathname: "/",
                 query: { id: "services" },
               }}
+              className="cursor-pointer font-semibold uppercase text-sm hover:text-primary-600 transition-colors relative" 
+              style={{ 
+                color: "#5c3327",
+                position: "relative"
+              }}
+              onMouseEnter={(e) => {
+                const span = e.currentTarget.querySelector('span');
+                span.style.width = '100%';
+                span.style.left = '0';
+                span.style.transform = 'translateX(0)';
+              }}
+              onMouseLeave={(e) => {
+                const span = e.currentTarget.querySelector('span');
+                span.style.width = '0';
+                span.style.left = '50%';
+                span.style.transform = 'translateX(-50%)';
+              }}
             >
-              <a 
-                className="cursor-pointer font-semibold uppercase text-sm hover:text-primary-600 transition-colors relative" 
+              Serviços
+              <span 
+                className="absolute bottom-0 h-0.5 bg-primary-500 transition-all duration-300 ease-out" 
                 style={{ 
-                  color: "#5c3327",
-                  position: "relative"
+                  left: '50%',
+                  width: '0',
+                  transform: 'translateX(-50%)'
                 }}
-                onMouseEnter={(e) => {
-                  const span = e.currentTarget.querySelector('span');
-                  span.style.width = '100%';
-                  span.style.left = '0';
-                  span.style.transform = 'translateX(0)';
-                }}
-                onMouseLeave={(e) => {
-                  const span = e.currentTarget.querySelector('span');
-                  span.style.width = '0';
-                  span.style.left = '50%';
-                  span.style.transform = 'translateX(-50%)';
-                }}
-              >
-                Serviços
-                <span 
-                  className="absolute bottom-0 h-0.5 bg-primary-500 transition-all duration-300 ease-out" 
-                  style={{ 
-                    left: '50%',
-                    width: '0',
-                    transform: 'translateX(-50%)'
-                  }}
-                ></span>
-              </a>
+              ></span>
             </Link>
             <Link
-              passHref={true}
               scroll={false}
               href={{
                 pathname: "/",
                 query: { id: "team" },
               }}
+              className="cursor-pointer font-semibold uppercase text-sm hover:text-primary-600 transition-colors relative" 
+              style={{ 
+                color: "#5c3327",
+                position: "relative"
+              }}
+              onMouseEnter={(e) => {
+                const span = e.currentTarget.querySelector('span');
+                span.style.width = '100%';
+                span.style.left = '0';
+                span.style.transform = 'translateX(0)';
+              }}
+              onMouseLeave={(e) => {
+                const span = e.currentTarget.querySelector('span');
+                span.style.width = '0';
+                span.style.left = '50%';
+                span.style.transform = 'translateX(-50%)';
+              }}
             >
-              <a 
-                className="cursor-pointer font-semibold uppercase text-sm hover:text-primary-600 transition-colors relative" 
+              Nossa equipe
+              <span 
+                className="absolute bottom-0 h-0.5 bg-primary-500 transition-all duration-300 ease-out" 
                 style={{ 
-                  color: "#5c3327",
-                  position: "relative"
+                  left: '50%',
+                  width: '0',
+                  transform: 'translateX(-50%)'
                 }}
-                onMouseEnter={(e) => {
-                  const span = e.currentTarget.querySelector('span');
-                  span.style.width = '100%';
-                  span.style.left = '0';
-                  span.style.transform = 'translateX(0)';
-                }}
-                onMouseLeave={(e) => {
-                  const span = e.currentTarget.querySelector('span');
-                  span.style.width = '0';
-                  span.style.left = '50%';
-                  span.style.transform = 'translateX(-50%)';
-                }}
-              >
-                Nossa equipe
-                <span 
-                  className="absolute bottom-0 h-0.5 bg-primary-500 transition-all duration-300 ease-out" 
-                  style={{ 
-                    left: '50%',
-                    width: '0',
-                    transform: 'translateX(-50%)'
-                  }}
-                ></span>
-              </a>
+              ></span>
             </Link>
           </div>
 
@@ -181,73 +173,65 @@ export default function Header(props) {
           {/* Right Navigation Links - Hidden on Mobile */}
           <div className="hidden lg:flex items-center space-x-12">
             <Link
-              passHref={true}
               scroll={false}
               href={{
                 pathname: "/",
                 query: { id: "products" },
               }}
+              className="cursor-pointer font-semibold uppercase text-sm hover:text-primary-600 transition-colors relative" 
+              style={{ 
+                color: "#5c3327",
+                position: "relative"
+              }}
+              onMouseEnter={(e) => {
+                const span = e.currentTarget.querySelector('span');
+                span.style.width = '100%';
+                span.style.left = '0';
+                span.style.transform = 'translateX(0)';
+              }}
+              onMouseLeave={(e) => {
+                const span = e.currentTarget.querySelector('span');
+                span.style.width = '0';
+                span.style.left = '50%';
+                span.style.transform = 'translateX(-50%)';
+              }}
             >
-              <a 
-                className="cursor-pointer font-semibold uppercase text-sm hover:text-primary-600 transition-colors relative" 
+              Contato
+              <span 
+                className="absolute bottom-0 h-0.5 bg-primary-500 transition-all duration-300 ease-out" 
                 style={{ 
-                  color: "#5c3327",
-                  position: "relative"
+                  left: '50%',
+                  width: '0',
+                  transform: 'translateX(-50%)'
                 }}
-                onMouseEnter={(e) => {
-                  const span = e.currentTarget.querySelector('span');
-                  span.style.width = '100%';
-                  span.style.left = '0';
-                  span.style.transform = 'translateX(0)';
-                }}
-                onMouseLeave={(e) => {
-                  const span = e.currentTarget.querySelector('span');
-                  span.style.width = '0';
-                  span.style.left = '50%';
-                  span.style.transform = 'translateX(-50%)';
-                }}
-              >
-                Contato
-                <span 
-                  className="absolute bottom-0 h-0.5 bg-primary-500 transition-all duration-300 ease-out" 
-                  style={{ 
-                    left: '50%',
-                    width: '0',
-                    transform: 'translateX(-50%)'
-                  }}
-                ></span>
-              </a>
+              ></span>
             </Link>
             <Link
-              passHref={true}
               scroll={false}
               href={{
                 pathname: "/",
                 query: { id: "contact" },
               }}
+              className="cursor-pointer font-semibold uppercase text-sm transition-all duration-300 relative inline-block px-6 lg:px-8 py-2 lg:py-3 rounded-full font-bold" 
+              style={{ 
+                background: 'transparent',
+                border: '1px solid #edcb17',
+                color: "#5c3327",
+                position: "relative",
+                boxShadow: '0 2px 8px rgba(237, 203, 23, 0.1)'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = 'rgba(237, 203, 23, 0.05)';
+                e.currentTarget.style.transform = 'translateY(-1px)';
+                e.currentTarget.style.boxShadow = '0 4px 12px rgba(237, 203, 23, 0.2)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = 'transparent';
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = '0 2px 8px rgba(237, 203, 23, 0.1)';
+              }}
             >
-              <a 
-                className="cursor-pointer font-semibold uppercase text-sm transition-all duration-300 relative inline-block px-6 lg:px-8 py-2 lg:py-3 rounded-full font-bold" 
-                style={{ 
-                  background: 'transparent',
-                  border: '1px solid #edcb17',
-                  color: "#5c3327",
-                  position: "relative",
-                  boxShadow: '0 2px 8px rgba(237, 203, 23, 0.1)'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.background = 'rgba(237, 203, 23, 0.05)';
-                  e.currentTarget.style.transform = 'translateY(-1px)';
-                  e.currentTarget.style.boxShadow = '0 4px 12px rgba(237, 203, 23, 0.2)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.background = 'transparent';
-                  e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = '0 2px 8px rgba(237, 203, 23, 0.1)';
-                }}
-              >
-                Agendar
-              </a>
+              Agendar
             </Link>
           </div>
         </div>
@@ -261,114 +245,94 @@ export default function Header(props) {
             {/* Navigation Links */}
             <div className="space-y-6 text-left">
               <Link
-                passHref={true}
                 scroll={false}
                 href={{
                   pathname: "/",
                   query: { id: "services" },
                 }}
+                className="flex items-center justify-between w-full py-4 border-b border-gray-100 hover:bg-gray-50 transition-colors cursor-pointer text-left" 
+                style={{ color: "#5c3327" }}
+                onClick={closeMobileMenu}
               >
-                <a 
-                  className="flex items-center justify-between w-full py-4 border-b border-gray-100 hover:bg-gray-50 transition-colors cursor-pointer text-left" 
-                  style={{ color: "#5c3327" }}
-                  onClick={closeMobileMenu}
-                >
-                  <span className="font-semibold text-lg">Nossos Serviços</span>
-                  <svg className="h-5 w-5 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </a>
+                <span className="font-semibold text-lg">Nossos Serviços</span>
+                <svg className="h-5 w-5 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
               </Link>
               
               <Link
-                passHref={true}
                 scroll={false}
                 href={{
                   pathname: "/",
                   query: { id: "team" },
                 }}
+                className="flex items-center justify-between w-full py-4 border-b border-gray-100 hover:bg-gray-50 transition-colors cursor-pointer" 
+                style={{ color: "#5c3327" }}
+                onClick={closeMobileMenu}
               >
-                <a 
-                  className="flex items-center justify-between w-full py-4 border-b border-gray-100 hover:bg-gray-50 transition-colors cursor-pointer" 
-                  style={{ color: "#5c3327" }}
-                  onClick={closeMobileMenu}
-                >
-                  <span className="font-semibold text-lg">Nossa Equipe</span>
-                  <svg className="h-5 w-5 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </a>
+                <span className="font-semibold text-lg">Nossa Equipe</span>
+                <svg className="h-5 w-5 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
               </Link>
               
               <Link
-                passHref={true}
                 scroll={false}
                 href={{
                   pathname: "/",
                   query: { id: "products" },
                 }}
+                className="flex items-center justify-between w-full py-4 border-b border-gray-100 hover:bg-gray-50 transition-colors cursor-pointer" 
+                style={{ color: "#5c3327" }}
+                onClick={closeMobileMenu}
               >
-                <a 
-                  className="flex items-center justify-between w-full py-4 border-b border-gray-100 hover:bg-gray-50 transition-colors cursor-pointer" 
-                  style={{ color: "#5c3327" }}
-                  onClick={closeMobileMenu}
-                >
-                  <span className="font-semibold text-lg">Produtos</span>
-                  <svg className="h-5 w-5 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </a>
+                <span className="font-semibold text-lg">Produtos</span>
+                <svg className="h-5 w-5 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
               </Link>
               
               <Link
-                passHref={true}
                 scroll={false}
                 href={{
                   pathname: "/",
                   query: { id: "contact" },
                 }}
+                className="flex items-center justify-between w-full py-4 border-b border-gray-100 hover:bg-gray-50 transition-colors cursor-pointer" 
+                style={{ color: "#5c3327" }}
+                onClick={closeMobileMenu}
               >
-                <a 
-                  className="flex items-center justify-between w-full py-4 border-b border-gray-100 hover:bg-gray-50 transition-colors cursor-pointer" 
-                  style={{ color: "#5c3327" }}
-                  onClick={closeMobileMenu}
-                >
-                  <span className="font-semibold text-lg">Contato</span>
-                  <svg className="h-5 w-5 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </a>
+                <span className="font-semibold text-lg">Contato</span>
+                <svg className="h-5 w-5 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
               </Link>
 
               {/* Agendar Button */}
               <div className="pt-6">
                 <Link
-                  passHref={true}
                   scroll={false}
                   href={{
                     pathname: "/",
                     query: { id: "contact" },
                   }}
+                  className="block w-full text-left py-4 px-6 rounded-full font-bold text-lg transition-all duration-300" 
+                  style={{ 
+                    background: 'linear-gradient(135deg, #edcb17 0%, #ca8a04 100%)',
+                    color: "#5c3327",
+                    boxShadow: '0 4px 15px rgba(237, 203, 23, 0.3)'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-2px)';
+                    e.currentTarget.style.boxShadow = '0 6px 20px rgba(237, 203, 23, 0.4)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'translateY(0)';
+                    e.currentTarget.style.boxShadow = '0 4px 15px rgba(237, 203, 23, 0.3)';
+                  }}
+                  onClick={closeMobileMenu}
                 >
-                  <a 
-                    className="block w-full text-left py-4 px-6 rounded-full font-bold text-lg transition-all duration-300" 
-                    style={{ 
-                      background: 'linear-gradient(135deg, #edcb17 0%, #ca8a04 100%)',
-                      color: "#5c3327",
-                      boxShadow: '0 4px 15px rgba(237, 203, 23, 0.3)'
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.transform = 'translateY(-2px)';
-                      e.currentTarget.style.boxShadow = '0 6px 20px rgba(237, 203, 23, 0.4)';
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.transform = 'translateY(0)';
-                      e.currentTarget.style.boxShadow = '0 4px 15px rgba(237, 203, 23, 0.3)';
-                    }}
-                    onClick={closeMobileMenu}
-                  >
-                    Agendar Horário
-                  </a>
+                  Agendar Horário
                 </Link>
               </div>
 
