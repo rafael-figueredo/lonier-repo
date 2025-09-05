@@ -45,7 +45,7 @@ export default function Hero() {
                 href="https://wa.me/5511951316040"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 rounded-lg font-semibold text-base transition-all duration-300 hover:transform hover:scale-105 inline-block"
+                className="px-6 py-3 rounded-lg font-semibold text-base transition-all duration-300 hover:transform hover:scale-105 inline-block text-center"
                 style={{ 
                   backgroundColor: "#edcb17",
                   color: "#5c3327",

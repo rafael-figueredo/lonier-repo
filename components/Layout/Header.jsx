@@ -227,7 +227,7 @@ export default function Header(props) {
               href="https://wa.me/5511951316040"
               target="_blank"
               rel="noopener noreferrer"
-              className="cursor-pointer font-bold uppercase text-sm transition-all duration-300 relative inline-block px-6 lg:px-8 py-2 lg:py-3 rounded-full" 
+              className="cursor-pointer font-bold uppercase text-sm transition-all duration-300 relative inline-block px-6 lg:px-8 py-2 lg:py-3 rounded-full text-center" 
               style={{ 
                 background: 'transparent',
                 border: '1px solid #edcb17',
@@ -342,7 +342,7 @@ export default function Header(props) {
                   href="https://wa.me/5511951316040"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full text-left py-4 px-6 rounded-full font-bold text-lg transition-all duration-300" 
+                  className="block w-full text-center py-4 px-6 rounded-full font-bold text-lg transition-all duration-300" 
                   style={{ 
                     background: 'linear-gradient(135deg, #edcb17 0%, #ca8a04 100%)',
                     color: "#5c3327",
