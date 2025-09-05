@@ -3,7 +3,6 @@ import Head from "next/head";
 import Header from "./Header";
 import Footer from "./Footer";
 import useDocumentScrollThrottled from "../Hooks/useDocumentScrollThrottled";
-import BookingMobile from "./BookingMobile";
 import Booking from "./Booking";
 export default function Layout({ children, props }) {
   const [footerFixed, setFooterFixed] = React.useState(true);
@@ -79,10 +78,6 @@ export default function Layout({ children, props }) {
         <meta property="og:image" content="/android-chrome-512x512.png" />
       </Head>
       <Header onClick={() => setShowBooking(true)} />
-      <BookingMobile
-        onClick={() => setShowBooking(true)}
-        position={footerFixed}
-      />
       {showBooking && (
         <Booking showBooking={showBooking} setShowBooking={setShowBooking} />
       )}
