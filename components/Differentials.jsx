@@ -1,8 +1,15 @@
 import React from "react";
+import useScrollAnimation from "./Hooks/useScrollAnimation";
 
 export default function Differentials() {
+  const [differentialsRef, isDifferentialsVisible] = useScrollAnimation({ threshold: 0.1 });
+
   return (
-    <section className="py-16 bg-white">
+    <section 
+      id="services"
+      ref={differentialsRef}
+      className={`py-16 bg-white scroll-animate ${isDifferentialsVisible ? 'animate-fade-up' : ''}`}
+    >
       <div className="container mx-auto px-4">
         {/* Section Title */}
         <div className="text-center mb-12">

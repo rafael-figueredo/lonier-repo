@@ -1,6 +1,8 @@
 import React from "react";
+import useScrollAnimation from "../Hooks/useScrollAnimation";
 
 export default function StudioServices() {
+  const [servicesRef, isServicesVisible] = useScrollAnimation({ threshold: 0.1 });
 
   const professionals = [
     {
@@ -80,7 +82,11 @@ export default function StudioServices() {
   ];
 
   return (
-    <section className="py-16 bg-white">
+    <section 
+      id="professionals"
+      ref={servicesRef}
+      className={`py-16 bg-white scroll-animate ${isServicesVisible ? 'animate-fade-up' : ''}`}
+    >
       <div className="container mx-auto px-4">
         {/* Section Title */}
         <div className="text-center mb-12">
@@ -93,7 +99,7 @@ export default function StudioServices() {
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {professionals.map((professional, index) => (
             <div 
               key={professional.id}
@@ -136,15 +142,19 @@ export default function StudioServices() {
           <p className="text-lg mb-6" style={{ color: "#6b7280" }}>
             Agende seu horário com nossas profissionais especializadas
           </p>
-          <button 
-            className="px-8 py-3 rounded-lg font-semibold text-white hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+          <a 
+            href="https://wa.me/5511951316040"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-8 py-3 rounded-lg font-semibold text-white hover:shadow-lg transition-all duration-300 hover:-translate-y-1 inline-block"
             style={{ 
               backgroundColor: "#edcb17",
-              boxShadow: "0 8px 25px rgba(237, 203, 23, 0.3)"
+              boxShadow: "0 8px 25px rgba(237, 203, 23, 0.3)",
+              textDecoration: "none"
             }}
           >
             Agendar Horário
-          </button>
+          </a>
         </div>
       </div>
     </section>

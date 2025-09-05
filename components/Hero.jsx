@@ -1,9 +1,14 @@
 import React from "react";
+import useScrollAnimation from "./Hooks/useScrollAnimation";
 
 export default function Hero() {
+  const [heroRef, isHeroVisible] = useScrollAnimation({ threshold: 0.1 });
+
   return (
     <section 
-      className="py-12 lg:py-16 flex items-center"
+      id="home"
+      ref={heroRef}
+      className={`py-12 lg:py-16 flex items-center scroll-animate ${isHeroVisible ? 'animate-fade-up' : ''}`}
       style={{ 
         background: 'linear-gradient(135deg, #fcfcec 0%, #f9f9f9 100%)',
         paddingTop: '100px' // Para compensar o header fixo
@@ -36,12 +41,16 @@ export default function Hero() {
             {/* Call-to-Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-3">
               {/* Primary Button */}
-              <button 
-                className="px-6 py-3 rounded-lg font-semibold text-base transition-all duration-300 hover:transform hover:scale-105"
+              <a 
+                href="https://wa.me/5511951316040"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 rounded-lg font-semibold text-base transition-all duration-300 hover:transform hover:scale-105 inline-block"
                 style={{ 
                   backgroundColor: "#edcb17",
                   color: "#5c3327",
-                  boxShadow: "0 4px 15px rgba(237, 203, 23, 0.3)"
+                  boxShadow: "0 4px 15px rgba(237, 203, 23, 0.3)",
+                  textDecoration: "none"
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.boxShadow = "0 6px 20px rgba(237, 203, 23, 0.4)";
@@ -53,7 +62,7 @@ export default function Hero() {
                 }}
               >
                 Agendar Horário
-              </button>
+              </a>
 
               {/* Secondary Button */}
               <button 
@@ -63,6 +72,17 @@ export default function Hero() {
                   color: "#5c3327",
                   border: "2px solid #edcb17",
                   boxShadow: "0 2px 8px rgba(237, 203, 23, 0.1)"
+                }}
+                onClick={() => {
+                  const element = document.getElementById('services');
+                  if (element) {
+                    smoothscroll.polyfill();
+                    element.scrollIntoView({
+                      behavior: "smooth",
+                      block: "start",
+                      inline: "nearest",
+                    });
+                  }
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.backgroundColor = "rgba(237, 203, 23, 0.05)";

@@ -75,16 +75,22 @@ export default function Header(props) {
 
           {/* Left Navigation Links - Hidden on Mobile */}
           <div className="hidden lg:flex items-center space-x-12">
-            <Link
-              scroll={false}
-              href={{
-                pathname: "/",
-                query: { id: "services" },
-              }}
+            <a
               className="cursor-pointer font-semibold uppercase text-sm hover:text-primary-600 transition-colors relative" 
               style={{ 
                 color: "#5c3327",
                 position: "relative"
+              }}
+              onClick={() => {
+                const element = document.getElementById('services');
+                if (element) {
+                  smoothscroll.polyfill();
+                  element.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                    inline: "nearest",
+                  });
+                }
               }}
               onMouseEnter={(e) => {
                 const span = e.currentTarget.querySelector('span');
@@ -108,17 +114,23 @@ export default function Header(props) {
                   transform: 'translateX(-50%)'
                 }}
               ></span>
-            </Link>
-            <Link
-              scroll={false}
-              href={{
-                pathname: "/",
-                query: { id: "team" },
-              }}
+            </a>
+            <a
               className="cursor-pointer font-semibold uppercase text-sm hover:text-primary-600 transition-colors relative" 
               style={{ 
                 color: "#5c3327",
                 position: "relative"
+              }}
+              onClick={() => {
+                const element = document.getElementById('professionals');
+                if (element) {
+                  smoothscroll.polyfill();
+                  element.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                    inline: "nearest",
+                  });
+                }
               }}
               onMouseEnter={(e) => {
                 const span = e.currentTarget.querySelector('span');
@@ -142,7 +154,7 @@ export default function Header(props) {
                   transform: 'translateX(-50%)'
                 }}
               ></span>
-            </Link>
+            </a>
           </div>
 
                      {/* Centered Logo */}
@@ -211,19 +223,18 @@ export default function Header(props) {
                 }}
               ></span>
             </Link>
-            <Link
-              scroll={false}
-              href={{
-                pathname: "/",
-                query: { id: "contact" },
-              }}
+            <a
+              href="https://wa.me/5511951316040"
+              target="_blank"
+              rel="noopener noreferrer"
               className="cursor-pointer font-bold uppercase text-sm transition-all duration-300 relative inline-block px-6 lg:px-8 py-2 lg:py-3 rounded-full" 
               style={{ 
                 background: 'transparent',
                 border: '1px solid #edcb17',
                 color: "#5c3327",
                 position: "relative",
-                boxShadow: '0 2px 8px rgba(237, 203, 23, 0.1)'
+                boxShadow: '0 2px 8px rgba(237, 203, 23, 0.1)',
+                textDecoration: "none"
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.background = 'rgba(237, 203, 23, 0.05)';
@@ -237,7 +248,7 @@ export default function Header(props) {
               }}
             >
               Agendar
-            </Link>
+            </a>
           </div>
         </div>
       </nav>
@@ -249,37 +260,49 @@ export default function Header(props) {
            <div className="flex flex-col h-full px-6 pt-4">
             {/* Navigation Links */}
             <div className="space-y-6 text-left">
-              <Link
-                scroll={false}
-                href={{
-                  pathname: "/",
-                  query: { id: "services" },
-                }}
+              <a
                 className={`flex items-center justify-between w-full py-4 border-b border-gray-100 hover:bg-gray-50 transition-colors cursor-pointer text-left animate-fade-in-up menu-item-delay-1`}
                 style={{ color: "#5c3327" }}
-                onClick={closeMobileMenu}
+                onClick={() => {
+                  const element = document.getElementById('services');
+                  if (element) {
+                    smoothscroll.polyfill();
+                    element.scrollIntoView({
+                      behavior: "smooth",
+                      block: "start",
+                      inline: "nearest",
+                    });
+                  }
+                  closeMobileMenu();
+                }}
               >
                 <span className="font-semibold text-lg">Nossos Serviços</span>
                 <svg className="h-5 w-5 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
-              </Link>
+              </a>
               
-              <Link
-                scroll={false}
-                href={{
-                  pathname: "/",
-                  query: { id: "team" },
-                }}
+              <a
                 className={`flex items-center justify-between w-full py-4 border-b border-gray-100 hover:bg-gray-50 transition-colors cursor-pointer animate-fade-in-up menu-item-delay-2`}
                 style={{ color: "#5c3327" }}
-                onClick={closeMobileMenu}
+                onClick={() => {
+                  const element = document.getElementById('professionals');
+                  if (element) {
+                    smoothscroll.polyfill();
+                    element.scrollIntoView({
+                      behavior: "smooth",
+                      block: "start",
+                      inline: "nearest",
+                    });
+                  }
+                  closeMobileMenu();
+                }}
               >
                 <span className="font-semibold text-lg">Nossa Equipe</span>
                 <svg className="h-5 w-5 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
-              </Link>
+              </a>
               
               <Link
                 scroll={false}
@@ -315,17 +338,16 @@ export default function Header(props) {
 
               {/* Agendar Button */}
               <div className="pt-6 animate-fade-in-up menu-item-delay-5">
-                <Link
-                  scroll={false}
-                  href={{
-                    pathname: "/",
-                    query: { id: "contact" },
-                  }}
+                <a
+                  href="https://wa.me/5511951316040"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block w-full text-left py-4 px-6 rounded-full font-bold text-lg transition-all duration-300" 
                   style={{ 
                     background: 'linear-gradient(135deg, #edcb17 0%, #ca8a04 100%)',
                     color: "#5c3327",
-                    boxShadow: '0 4px 15px rgba(237, 203, 23, 0.3)'
+                    boxShadow: '0 4px 15px rgba(237, 203, 23, 0.3)',
+                    textDecoration: "none"
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.transform = 'translateY(-2px)';
@@ -338,7 +360,7 @@ export default function Header(props) {
                   onClick={closeMobileMenu}
                 >
                   Agendar Horário
-                </Link>
+                </a>
               </div>
 
             </div>
